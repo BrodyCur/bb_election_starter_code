@@ -19,8 +19,6 @@ document.addEventListener("DOMContentLoaded", function() {
       // CREATING THE FORM SUBMIT BUTTON //
       const voteBtn = document.createElement('input');
       voteBtn.type = "submit";
-      // voteBtn.name = "name";
-      // voteBtn.value = candidate.name;
 
       // CREATING THE HIDDEN FIELD THAT HOLDS THE DATA TO THE BUTTON //
       const hiddenFld = document.createElement('input');
@@ -56,10 +54,14 @@ document.addEventListener("DOMContentLoaded", function() {
         })
       });
     });
-
   })
   .catch(error => {
     console.log(error)
   });
+  const refreshButton = document.querySelector('#refresh-button')
+  refreshButton.addEventListener('click', () => {
+    location.reload();
+  })
+
   console.log('hello world!')
 });
